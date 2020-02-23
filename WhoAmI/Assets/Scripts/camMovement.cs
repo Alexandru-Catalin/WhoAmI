@@ -7,6 +7,7 @@ public class camMovement : MonoBehaviour
     public float mouseSensivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
