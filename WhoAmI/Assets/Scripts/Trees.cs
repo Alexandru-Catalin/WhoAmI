@@ -7,6 +7,7 @@ public class Trees : MonoBehaviour
 
     private bool inRange;
     public GameObject[] destroy;
+    public GameObject audio;
     public int M;
     public int P;
     public int S;
@@ -29,7 +30,7 @@ public class Trees : MonoBehaviour
             destroy[2].GetComponent<Trees>().enabled = false;
 
             GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
-
+            audio.GetComponent<AudioSource>().Play();
 
             this.gameObject.SetActive(false);
 
