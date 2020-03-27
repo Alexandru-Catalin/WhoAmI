@@ -54,7 +54,6 @@ public class doorOpening : MonoBehaviour
         {
             if (!anim.GetBool("Open"))
             {
-
                 if (Input.GetMouseButtonDown(0))
                 {
                     anim.SetBool("Open", true);
@@ -65,6 +64,7 @@ public class doorOpening : MonoBehaviour
                     {
                         GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
                     }
+
                 }
             }
         }

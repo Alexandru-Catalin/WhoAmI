@@ -36,7 +36,7 @@ public class goldIngots : MonoBehaviour
 
             if(end == true)
             {
-                GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
+                GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
             }
         }
     }

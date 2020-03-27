@@ -19,10 +19,10 @@ public class openLater : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
-        if(timer < 0)
-        {
-            
+        if(timer <= 0)
+        {   
             anim.SetBool("Open", true);
+            
         }
     }
 }
