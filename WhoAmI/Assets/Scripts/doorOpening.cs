@@ -33,18 +33,44 @@ public class doorOpening : MonoBehaviour
                     anim.SetBool("Open", true);
                     destroy.GetComponent<doorOpening>().enabled = false;
                     GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(M, P, S, C);
-                  
+
                     if (end == true)
                     {
                         GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
                     }
-                                 
+
                 }
             }
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.E))
+            {
+                anim.SetBool("Open", false);
+            }
+        }
+
+        if (inRange)
+        {
+            if (!anim.GetBool("Open"))
+            {
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    anim.SetBool("Open", true);
+                    destroy.GetComponent<doorOpening>().enabled = false;
+                    GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(M, P, S, C);
+
+                    if (end == true)
+                    {
+                        GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetMouseButtonDown(0))
             {
                 anim.SetBool("Open", false);
             }

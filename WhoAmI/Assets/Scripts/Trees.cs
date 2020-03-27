@@ -39,6 +39,24 @@ public class Trees : MonoBehaviour
                 GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
             }
         }
+
+        if (Input.GetMouseButtonDown(0) && inRange == true)
+        {
+
+            destroy[0].GetComponent<Trees>().enabled = false;
+            destroy[1].GetComponent<Trees>().enabled = false;
+            destroy[2].GetComponent<Trees>().enabled = false;
+
+            GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
+            audio.GetComponent<AudioSource>().Play();
+
+            this.gameObject.SetActive(false);
+
+            if (end == true)
+            {
+                GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
