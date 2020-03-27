@@ -29,6 +29,16 @@ public class goldIngots : MonoBehaviour
                 GameObject.Find("ScoreManager").GetComponent<scoreSystem>().nextScene();
             }
         }
+
+        if(Input.GetMouseButtonDown(0) && inRange == true)
+        {
+            GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
+
+            if(end == true)
+            {
+                GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider collider)
