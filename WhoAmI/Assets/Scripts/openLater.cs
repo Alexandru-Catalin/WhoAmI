@@ -6,7 +6,7 @@ public class openLater : MonoBehaviour
 {
 
     private Animator anim;
-    public float timer = 10f;
+    public float timer = 10;
     
     // Start is called before the first frame update
     void Start()
