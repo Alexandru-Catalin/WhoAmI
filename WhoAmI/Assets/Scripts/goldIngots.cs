@@ -21,7 +21,7 @@ public class goldIngots : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && inRange == true)
         {
-
+            Destroy(gameObject);
             GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
 
             if (end == true)
@@ -32,6 +32,7 @@ public class goldIngots : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) && inRange == true)
         {
+            Destroy(gameObject);
             GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
 
             if(end == true)
