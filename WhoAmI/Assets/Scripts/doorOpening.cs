@@ -32,7 +32,7 @@ public class doorOpening : MonoBehaviour
                 {
                     anim.SetBool("Open", true);
                     destroy.GetComponent<doorOpening>().enabled = false;
-                    GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(M, P, S, C);
+                    GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
 
                     if (end == true)
                     {
@@ -58,7 +58,7 @@ public class doorOpening : MonoBehaviour
                 {
                     anim.SetBool("Open", true);
                     destroy.GetComponent<doorOpening>().enabled = false;
-                    GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(M, P, S, C);
+                    GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
 
                     if (end == true)
                     {
