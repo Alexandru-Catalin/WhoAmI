@@ -32,7 +32,7 @@ public class Trees : MonoBehaviour
             GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
             audio.GetComponent<AudioSource>().Play();
 
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
 
             if (end == true)
             {
@@ -50,7 +50,7 @@ public class Trees : MonoBehaviour
             GameObject.Find("ScoreManager").GetComponent<scoreSystem>().UpdateScoreArray(S, C, M, P);
             audio.GetComponent<AudioSource>().Play();
 
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
 
             if (end == true)
             {
