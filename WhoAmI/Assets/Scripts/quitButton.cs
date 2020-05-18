@@ -7,7 +7,6 @@ public class quitButton : MonoBehaviour
 { 
     public void QuitButton()
     {
-        Debug.Log("QUIT!");
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }
